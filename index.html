@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Alijn Demo</title>
+  <meta charset="utf-8">
+  <!-- Source Sans via Google Web Fonts -->
+  <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  <!-- jQuery -->
+  <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <!-- Alijn Functions -->
+  <script src="alijn.js" type="text/javascript"></script>
+  <!-- Alijn Responsive Rules -->
+  <script src="alijn.responsive.js" type="text/javascript"></script>
+  <!-- Mobile viewport settings -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1, user-scalable=no, minimal-ui">
+  <!-- CSS Styles -->
+  <style>
+    * { font-family: 'Source Sans Pro', sans-serif; }
+    strong { font-weight: 400; }
+    body { background: #eaeaea; margin: 0; padding: 0; height: 100%; }
+    #main { display: block; background: #999; overflow: hidden; border-bottom: 1px solid #fff; height: 33%; overflow: visible; padding-top: 15px; }
+    #card, #note, #sticky { display: block; width: auto; margin: 15px auto; margin-left: 15px; margin-right: 15px; padding: 15px 30px; background: #fff; text-align: center; font-weight: 200; font-size: 14pt; color: #555; border: 1px solid rgba(0,0,0,.075); border-top-color: rgba(255,255,255,.5); border-bottom-color: rgba(0,0,0,.15); border-radius: 3px; text-shadow: rgba(255,255,255,.3) 0 1px 1px; box-shadow: rgba(0,0,0,.15) 0 5px 15px; }
+  </style>
+</head>
+<body id="body">
+
+  <section id="main">
+    <article id="card" style="background: lightgreen">
+      <strong>Phone</strong> = screen center, <strong>Desktop</strong> = grey box center, <strong>Tablet</strong> = no centering
+    </article>
+    <article id="note" style="background: skyblue">
+      <strong>Tablet</strong> = screen center, <strong>Phone</strong> = grey box center, <strong>Desktop</strong> = no centering
+    </article>
+    <article id="sticky" style="background: pink">
+      <strong>Desktop</strong> = screen center, <strong>Tablet</strong> = grey box center, <strong>Phone</strong> = no centering
+    </article>
+  <section>
+
+</body>
+</html>
