@@ -16,12 +16,12 @@ function alijn() {
   if ( tabletWidth === false && desktopWidth === false) {
 
     // Card Alignment
-    $(document).vAlijn('#card');
-    $(document).hAlijn('#card');
+    $(document).vAlijn('#card', false);
+    $(document).hAlijn('#card', false);
 
     // Note alignment
-    $(document).vAlijn('#note', '#main');
-    $(document).hAlijn('#note', '#main');
+    $(document).vAlijn('#note', false);
+    $(document).hAlijn('#note', false);
 
     // Sticky alignment
     $(document).vAlijn('#sticky', false);
@@ -34,16 +34,16 @@ function alijn() {
   if (tabletWidth === true && desktopWidth === false) {
 
     // Card Alignment
-    $(document).vAlijn('#card', false);
-    $(document).hAlijn('#card', false);
+    $(document).vAlijn('#card', '.v-third-top');
+    $(document).hAlijn('#card', '.v-third-top');
 
     // Note alignment
-    $(document).vAlijn('#note');
-    $(document).hAlijn('#note');
+    $(document).vAlijn('#note', '.v-third-middle');
+    $(document).hAlijn('#note', '.v-third-middle');
 
     // Sticky alignment
-    $(document).vAlijn('#sticky', '#main');
-    $(document).hAlijn('#sticky', '#main');
+    $(document).vAlijn('#sticky', '.v-third-bottom');
+    $(document).hAlijn('#sticky', '.v-third-bottom');
 
   } // end Tablet Styles
 
@@ -52,16 +52,16 @@ function alijn() {
   if (desktopWidth === true) {
 
     // Card Alignment
-    $(document).vAlijn('#card', '#main');
-    $(document).hAlijn('#card', '#main');
+    $(document).vAlijn('#card', '.h-third-left');
+    $(document).hAlijn('#card', '.h-third-left');
 
     // Note alignment
-    $(document).vAlijn('#note', false);
-    $(document).hAlijn('#note', false);
+    $(document).vAlijn('#note', '.h-third-middle');
+    $(document).hAlijn('#note', '.h-third-middle');
 
     // Sticky alignment
-    $(document).vAlijn('#sticky');
-    $(document).hAlijn('#sticky');
+    $(document).vAlijn('#sticky', '.h-third-right');
+    $(document).hAlijn('#sticky', '.h-third-right');
 
   } // end Desktop Styles
 
