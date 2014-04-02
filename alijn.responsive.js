@@ -13,7 +13,7 @@ function alijn() {
 
   // Phone-only styles
   // When the window is 480px or narrower
-  if ( tabletWidth === false && desktopWidth === false) {
+  if (tabletWidth === false && desktopWidth === false) {
 
     // Card Alignment
     $(document).vAlijn('#card', false);
