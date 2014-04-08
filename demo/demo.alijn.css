@@ -1,0 +1,252 @@
+/* Demo CSS */
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+a {
+  outline: none;
+  text-decoration: none;
+}
+
+/* Modal Styles */
+.modal {
+  width: 40%;
+  height: 40%;
+  background: #fff;
+  border: 1px solid #bbb;
+  transition: all .2s ease-in-out;
+  opacity: 0;
+  z-index: 50 !important;
+  pointer-events: none;
+  box-shadow: rgba(0,0,0,.15) 0 15px 50px;
+  padding: 0 15px;
+  overflow: scroll;
+}
+.modal.show {
+  opacity: 1;
+  z-index: 5000 !important;
+  pointer-events: auto;
+}
+.modal nav {
+  padding: 15px 0 0 0;
+  position: relative;
+}
+.modal nav h2 {
+  display: inline-block;
+  font-size: 18pt;
+  font-weight: 300;
+  margin: 0;
+  padding: 0;
+  color: #777;
+}
+.modal nav a {
+  color: #999;
+  transition: all .2s ease-in-out;
+  position: absolute;
+  font-size: 18pt;
+  top: 12px;
+  right: 7px;
+}
+.modal p {
+  margin: 5px;
+  font-size: 12pt;
+  line-height: 16pt;
+  font-weight: 400;
+  color: #777;
+}
+
+/* Carousel Styles */
+.carousel {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  overflow: hidden;
+}
+.carousel .slide {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.slidenav {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  z-index: 5000;
+}
+.slidenav a {
+  font-family: 'Source Sans Pro', sans-serif;
+  outline: none;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  font-size: 48pt;
+  line-height: 48pt;
+  transition: all .2s ease-in-out;
+  opacity: 0.3;
+}
+.slidenav a:hover,
+.slidenav a:focus {
+  opacity: 1;
+}
+
+/*
+// Slide: Alijn
+*/
+.slide#alijn * {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+.slide#alijn {
+  background: #eaeaea;
+  margin: 0;
+  height:
+  100%;
+}
+.slide#alijn strong {
+  font-weight: 400;
+}
+.slide#alijn h1 {
+  font-size: 24pt;
+  text-align: center;
+  color: #777;
+  margin: 0;
+  padding-top: 15px;
+}
+.slide#alijn #card,
+.slide#alijn #note,
+.slide#alijn #sticky {
+  display: block;
+  width: auto;
+  margin: 15px 0;
+  margin-left: 15px;
+  margin-right: 15px;
+  padding: 15px 30px;
+  background: #fff;
+  text-align: center;
+  font-weight: 200;
+  font-size: 12pt;
+  color: #555;
+  border: 1px solid rgba(0,0,0,.075);
+  border-top-color: rgba(255,255,255,.5);
+  border-bottom-color: rgba(0,0,0,.15);
+  border-radius: 3px;
+  text-shadow: rgba(255,255,255,.3) 0 1px 1px;
+  box-shadow: rgba(0,0,0,.15) 0 5px 15px;
+}
+.slide#alijn footer {
+  position: absolute;
+  bottom: 15px;
+  font-weight: 400;
+  font-size: 10pt;
+  color: #999;
+  width: 100%;
+  text-align: center
+}
+.slide#alijn footer a {
+  outline: none;
+  color: #777;
+  text-decoration: none;
+}
+.slide#alijn footer a:hover,
+.slide#alijn footer a:focus {
+  color: #555;
+  text-decoration: none;
+}
+
+/*
+// Slide: Modals
+*/
+.slide#modal * {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+.slide#modal {
+  background: #a4c0e4;
+  margin: 0;
+  height:
+  100%;
+}
+.slide#modal h1 {
+  font-size: 24pt;
+  text-align: center;
+  color: #777;
+  margin: 0;
+  padding-top: 15px;
+}
+.slide#modal p.intro {
+  text-align: center;
+  color: #0057ae;
+}
+.slide#modal p.intro a {
+  color: #00438a;
+}
+.slide#modal p.intro a:hover,
+.slide#modal p.intro a:focus {
+  color: #2c72c7;
+}
+
+/*
+// Slide: Element Queries
+*/
+.slide#element-queries * {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+.slide#element-queries {
+  background: #a8dde0;
+  margin: 0;
+  height:
+  100%;
+}
+.slide#element-queries h1 {
+  font-size: 24pt;
+  text-align: center;
+  color: #777;
+  margin: 0;
+  padding-top: 15px;
+}
+.slide#element-queries #querybox {
+  width: 75%;
+  height: 75%;
+  background: #00c4cc;
+  padding: 0 0 0 0;
+}
+
+.slide#element-queries #querybox[class~="350plus"] {
+  background: #00a7b3;
+}
+
+.slide#element-queries #querybox[class~="500plus"] {
+  background: #007880;
+}
+
+.slide#element-queries #querybox[class~="750plus"] {
+  background: #006066;
+}
+
+.slide#element-queries #querybox:before {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  text-shadow: #006066 1px 2px 2px;
+}
+
+.slide#element-queries #querybox[class~="350minus"]:before {
+  content: 'Narrower than 350px';
+  font-size: 12pt;
+}
+
+.slide#element-queries #querybox[class~="350plus"]:before {
+  content: 'Wider than 350px';
+}
+
+.slide#element-queries #querybox[class~="500plus"]:before {
+  content: 'Wider than 500px';
+}
+
+.slide#element-queries #querybox[class~="750plus"]:before {
+  content: 'Wider than 750px';
+}
