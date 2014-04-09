@@ -1,40 +1,26 @@
-
-/*function offsetHeight() {
-  var originalHeight = ($(window).innerHeight())
-  var scrollOffset = ($('.carousel').scrollTop() - originalHeight)
-  var scrollComputed = ((scrollOffset - originalHeight)*-1)
-
-  if (scrollComputed >= 0) {
-    $('.carousel').scrollTop((originalHeight*2));
-  }
-
-}*/
-
-////////////////////////////////////////////////
-                                              //
-//                                            //
-// Demo page                                  //
-//                                            //
-                                              //
-jQuery.event.add(window, 'load', alijn)       //
-jQuery.event.add(window, 'resize', alijn)     //
-                                              //
-function alijn() {                            //
-                                              //
-  // Mobile Breakpoints                       //
-  tabletWidth = ($(window).width() >= 481)    //
-  desktopWidth = ($(window).width() >= 769)   //
-                                              //
-////////////////////////////////////////////////
-
-/*  offsetHeight(); */
+////////////////////////////////////////////////////
+                                                  //
+//                                                //
+// Demo page                                      //
+//                                                //
+                                                  //
+jQuery.event.add(window, 'load', alijn);          //
+jQuery.event.add(window, 'resize', alijn);        //
+                                                  //
+function alijn() {                                //
+                                                  //
+  // Mobile Breakpoints                           //
+  var tabletWidth = ($(window).width() >= 481),   //
+      desktopWidth = ($(window).width() >= 769);  //
+                                                  //
+////////////////////////////////////////////////////
 
   // Smooth Scrolling
   $('.smoothScroll').click(function(event) {
     event.preventDefault();
-    var dest = 0;
-    var offPage = position - $('.carousel').height();
-    var position = $('.carousel').scrollTop()
+    var dest = 0,
+        position = $('.carousel').scrollTop(),
+        offPage = position - $('.carousel').height();
     if ($(this.hash).offset().top < offPage) {
       dest = (offPage);
     } else {
@@ -44,11 +30,11 @@ function alijn() {                            //
   });
 
   // data-elWidth
-  var elWidth = $('[data-elWidth]').outerWidth()
+  var elWidth = $('[data-elWidth]').outerWidth();
   $('[data-elWidth]').attr({'data-elWidth': elWidth});
 
   // data-reckon-text
-  var textLength = $(this).text().length
+  var textLength = $(this).text().length;
   $('[data-reckon-text]').attr({'data-reckon-text': textLength});
 
   ////////////////////
@@ -146,8 +132,8 @@ function alijn() {                            //
   //                           //
   ///////////////////////////////
 
-  $('.slide#element-queries').vAlijn('#querybox')
-  $('.slide#element-queries').hAlijn('#querybox')
+  $('.slide#element-queries').vAlijn('#querybox');
+  $('.slide#element-queries').hAlijn('#querybox');
 
   // #querybox element queries
   if (($('#querybox').outerWidth()) < 350) {
@@ -166,6 +152,6 @@ function alijn() {                            //
     $('#querybox').addClass('750plus');
   } else { $('#querybox').removeClass('750plus'); }
 
-////
-};//
-////
+///
+}//
+///

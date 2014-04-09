@@ -5,20 +5,20 @@
 // vAlijn - Vertical Centering
 $.fn.extend({
   vAlijn: function(element, parent) {
-    if (parent == undefined) {
+    if (parent === undefined) {
       parent = 'html';
-      $('html').css({'width': '100%', 'height': '100%'})
+      $('html').css({'width': '100%', 'height': '100%'});
     }
     if (parent !== undefined && parent !== false) {
-      scrollTop = $(window).scrollTop(),
-      parentOffset = $(parent).offset().top;
-      elementOffset = (parentOffset - scrollTop)
-      vCenter = (((($(parent).outerHeight(true))/2) - (($(element).outerHeight(true))/2)) + elementOffset)
+      var scrollTop = $(window).scrollTop(),
+          parentOffset = $(parent).offset().top,
+          elementOffset = (parentOffset - scrollTop),
+          vCenter = (((($(parent).outerHeight(true))/2) - (($(element).outerHeight(true))/2)) + elementOffset);
       $(parent).css('position', 'relative');
       $(element).css({'position': 'absolute', 'top': vCenter, 'z-index': '1000'});
     }
-    if (parent == false) {
-      $(element).css({'position': 'relative', 'top': '0', 'z-index': '0'})
+    if (parent === false) {
+      $(element).css({'position': 'relative', 'top': '0', 'z-index': '0'});
     }
   }
 });
@@ -26,20 +26,20 @@ $.fn.extend({
 // hAlijn - Horizontal Centering
 $.fn.extend({
   hAlijn: function(element, parent) {
-    if (parent == undefined) {
+    if (parent === undefined) {
       parent = 'html';
-      $('html').css({'width': '100%', 'height': '100%'})
+      $('html').css({'width': '100%', 'height': '100%'});
     }
     if (parent !== undefined && parent !== false) {
-      scrollTop = $(window).scrollTop(),
-      parentOffset = $(parent).offset().left;
-      elementOffset = (parentOffset - scrollTop)
-      hCenter = (((($(parent).outerWidth(true))/2) - (($(element).outerWidth(true))/2)) + elementOffset)
+      var scrollTop = $(window).scrollTop(),
+          parentOffset = $(parent).offset().left,
+          elementOffset = (parentOffset - scrollTop),
+          hCenter = (((($(parent).outerWidth(true))/2) - (($(element).outerWidth(true))/2)) + elementOffset);
       $(parent).css('position', 'relative');
       $(element).css({'position': 'absolute', 'left': hCenter, 'z-index': '1000'});
     }
-    if (parent == false) {
-      $(element).css({'position': 'relative', 'left': '0', 'z-index': '0'})
+    if (parent === false) {
+      $(element).css({'position': 'relative', 'left': '0', 'z-index': '0'});
     }
   }
 });
@@ -48,7 +48,7 @@ $.fn.extend({
 // Alignment Grid
 //
 
-$('html').append('<div class="alijnGrid"></div>')
+$('html').append('<div class="alijnGrid"></div>');
 
 // Halves
 $('.alijnGrid').append('\n\
@@ -121,4 +121,4 @@ $('head').append('\n\
   .alijnGrid div#v-third-middle {\n\
     top: 33%;\n\
   }\n\
-  </style>')
+  </style>');

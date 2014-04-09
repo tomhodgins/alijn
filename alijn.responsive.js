@@ -2,14 +2,14 @@
 // Alijn - Responsive JavaScript Rules
 //
 
-jQuery.event.add(window, 'load', alijn)
-jQuery.event.add(window, 'resize', alijn)
+jQuery.event.add(window, 'load', alijn);
+jQuery.event.add(window, 'resize', alijn);
 
 function alijn() {
 
   // Mobile Breakpoints
-  tabletWidth = ($(window).width() >= 481)
-  desktopWidth = ($(window).width() >= 769)
+  var tabletWidth = ($(window).width() >= 481),
+      desktopWidth = ($(window).width() >= 769);
 
   // Phone-only styles
   // When the window is 480px or narrower
@@ -65,4 +65,4 @@ function alijn() {
 
   } // end Desktop Styles
 
-};
+}
